@@ -1,0 +1,31 @@
+/* En src/components/Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    height: 60px;
+}
+
+.header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header-icons-container {
+    display: flex;
+    gap: 20px;
+    /* Espacio entre iconos */
+}
+
+.header-cart-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.header-profile-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
