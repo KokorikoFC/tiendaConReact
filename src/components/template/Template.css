@@ -1,0 +1,231 @@
+/* Template.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fceced;
+}
+
+.template-container {
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.info-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.decoration {
+    width: 100px;
+    height: 8px;
+    background-color: #f7415b;
+}
+
+.title {
+    width: 100%;
+    color: #333;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.price-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 1.2em;
+}
+
+.price {
+    color: #f7415b;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.description-container {
+    width: 100%;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.description-container p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1em;
+    overflow: hidden; /* Hide text that overflows the container */
+    display: -webkit-box; /* Enable line clamping */
+    -webkit-line-clamp: 5; /* Limit text to 3 lines (adjust as needed) */
+    -webkit-box-orient: vertical; /* Set vertical orientation for line clamping */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+}
+
+.category-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-block: 10px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.category-container p {
+    width: 100%;
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+}
+
+.category {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    gap: 15px;
+}
+
+.category-item {
+    display: flex;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+}
+
+.category-item img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.category-item p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+    text-align: center;
+}
+
+.cart-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quantity-button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 17px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    transition: background-color 0.3s;
+}
+
+.quantity-button:hover {
+    background-color: #eee;
+}
+
+.quantity-button:first-child {
+    border-right: 1px solid #ddd;
+}
+
+.quantity-button:last-child {
+    border-left: 1px solid #ddd;
+}
+
+.quantity-container span {
+    padding: 10px 17px;
+    font-size: 1em;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.add-to-cart-button {
+    background-color: #f7415b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.img-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    background-color: #ebb9c3;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.circle img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background-color: transparent;
+}
