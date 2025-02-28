@@ -1,6 +1,11 @@
+import { useId } from "react";
 import './Filters.css';
+import { useFilter } from '../../hooks/useFilters.jsx';
 
-function Filters({ setFilter }) {
+function Filters() {
+    const { setFilter } = useFilter();
+    const categoryFieldId = useId();
+
     const handleChangeCategory = (event) => {
         setFilter(prevState => ({
             ...prevState,
@@ -10,8 +15,8 @@ function Filters({ setFilter }) {
 
     return (
         <div>
-            <label htmlFor="category">Categoría</label>
-            <select id="category" onChange={handleChangeCategory}>
+            <label htmlFor={categoryFieldId}>Categoría</label>
+            <select id={categoryFieldId} onChange={handleChangeCategory}>
                 <option value="all">Todos</option>
                 <option value="pasteleria">Pastelería</option>
                 <option value="panaderia">Panadería</option>
