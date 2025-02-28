@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import Header from "../header/Header"; 
+import "./Home.css";
+import Header from "../header/Header";
 import Product from "../product/Product";
 import Filters from "../filters/Filters";
 import Cart from "../cart/Cart";
 import { products } from "./../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
 import { CartProvider } from "../../context/cartContext";
-
 
 function Home() {
     const navigate = useNavigate();
@@ -20,17 +20,17 @@ function Home() {
 
     return (
         <CartProvider>
-            <div>
-            <Header />
-            <h1>Página Principal (Home)</h1>
-            <p>Esta es la página de inicio.</p>
-            <button onClick={goToTemplate}>Ir a Template</button>
-            <Cart />
-            <div>
-                <Filters />
-                <Product products={filteredProducts} />
+            <div className="home">
+                <Header />
+                <h1>Página Principal (Home)</h1>
+                <p>Esta es la página de inicio.</p>
+                <button onClick={goToTemplate}>Ir a Template</button>
+                <Cart />
+                <div>
+                    <Filters />
+                    <Product products={filteredProducts} />
+                </div>
             </div>
-        </div>
         </CartProvider>
     );
 }
