@@ -3,7 +3,9 @@ import { useId } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../hooks/useCart.jsx";
 
-function CartItem({ name, price, image, quantity }) {
+function CartItem({ name, price, image, quantity, product }) {
+    const { addToCart, removeOneFromCart } = useCart();
+
     return (
         <li>
             <img src={image} alt={name} />
@@ -11,9 +13,11 @@ function CartItem({ name, price, image, quantity }) {
                 <strong>{name}</strong> - ${price}
             </div>
 
-            <footer>
+            <div className="quantity-controls">
+                <button onClick={() => removeOneFromCart(product)}>-</button>
                 <small>Qty: {quantity}</small>
-            </footer>
+                <button onClick={() => addToCart(product)}>+</button>
+            </div>
         </li>
     );
 }
@@ -29,7 +33,11 @@ export function Cart() {
             <aside className="cart">
                 <ul>
                     {cart.map((product) => (
-                        <CartItem key={product.id} {...product} />
+                        <CartItem
+                            key={product.id}
+                            product={product}
+                            {...product}
+                        />
                     ))}
                 </ul>
                 <button onClick={clearCart}>Limpiar</button>
