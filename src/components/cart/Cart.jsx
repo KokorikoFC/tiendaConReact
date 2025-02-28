@@ -1,31 +1,41 @@
-import './Cart.css';
+import "./Cart.css";
 import { useId } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { useCart } from "../../hooks/useCart.jsx";
 
-function Cart() {
-  const cartCheckBoxId = useId();
-
-  return (
-    <>
-      <label className="cartBtn" htmlFor={cartCheckBoxId}>
-        <FaShoppingCart className="cart-icon"/>
-      </label>
-      <input type="checkbox" id={cartCheckBoxId} hidden />
-      <aside className="cart">
-        <ul>
-          <li>
-            <img src="src/assets/products_img/fruit_pastry.png" alt="" />
-            <p>Tarta</p>
-            <div className="">
-              <p>Qty:1</p>
-              <button>+</button>
+function CartItem({ name, price, image, quantity }) {
+    return (
+        <li>
+            <img src={image} alt={name} />
+            <div>
+                <strong>{name}</strong> - ${price}
             </div>
-          </li>
-        </ul>
-        <button>Limpiar</button>
-      </aside>
-    </>
-  );
+
+            <footer>
+                <small>Qty: {quantity}</small>
+            </footer>
+        </li>
+    );
+}
+export function Cart() {
+    const cartCheckBoxId = useId();
+    const { cart, clearCart } = useCart();
+    return (
+        <>
+            <label className="cartBtn" htmlFor={cartCheckBoxId}>
+                <FaShoppingCart className="cart-icon" />
+            </label>
+            <input type="checkbox" id={cartCheckBoxId} hidden />
+            <aside className="cart">
+                <ul>
+                    {cart.map((product) => (
+                        <CartItem key={product.id} {...product} />
+                    ))}
+                </ul>
+                <button onClick={clearCart}>Limpiar</button>
+            </aside>
+        </>
+    );
 }
 
 export default Cart;

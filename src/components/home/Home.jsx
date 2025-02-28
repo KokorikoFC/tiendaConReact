@@ -5,6 +5,7 @@ import Filters from "../filters/Filters";
 import Cart from "../cart/Cart";
 import { products } from "./../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
+import { CartProvider } from "../../context/cartContext";
 
 
 function Home() {
@@ -18,7 +19,8 @@ function Home() {
     const filteredProducts = filterProducts(products);
 
     return (
-        <div>
+        <CartProvider>
+            <div>
             <Header />
             <h1>Página Principal (Home)</h1>
             <p>Esta es la página de inicio.</p>
@@ -29,6 +31,7 @@ function Home() {
                 <Product products={filteredProducts} />
             </div>
         </div>
+        </CartProvider>
     );
 }
 

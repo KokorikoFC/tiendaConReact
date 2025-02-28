@@ -1,6 +1,9 @@
 import "./Product.css";
+import { useCart } from "../../hooks/useCart.jsx";
 
 function Product({ products }) {
+    const { addToCart, cart } = useCart();
+
     return (
         <div className="product-container">
             <ul>
@@ -12,7 +15,9 @@ function Product({ products }) {
                         <p>Precio: ${product.price}</p>
                         <p>Categoría: {product.category}</p>
                         <div>
-                            <button>Añadir al carrito</button>
+                            <button onClick={() => addToCart(product)}>
+                                Añadir al carrito
+                            </button>
                         </div>
                     </li>
                 ))}
