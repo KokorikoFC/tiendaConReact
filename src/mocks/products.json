@@ -1,0 +1,20 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Pastel de frutas",
+            "description": "Pastel de frutas con crema y frutas frescas de temporada.",
+            "price": 5,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/fruit_pastry.png"
+        },
+        {
+            "id": 2,
+            "name": "Pan",
+            "description": "Pastel de frutas con crema y frutas frescas de temporada.",
+            "price": 5,
+            "category": "panaderia",
+            "image": "src/assets/products_img/fruit_pastry.png"
+        }
+    ]
+}
