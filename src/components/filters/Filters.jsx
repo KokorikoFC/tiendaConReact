@@ -1,15 +1,15 @@
 import { useId } from "react";
-import './Filters.css';
-import { useFilter } from '../../hooks/useFilters.jsx';
+import "./Filters.css";
+import { useFilter } from "../../hooks/useFilters.jsx";
 
 function Filters() {
     const { setFilter } = useFilter();
     const categoryFieldId = useId();
 
     const handleChangeCategory = (event) => {
-        setFilter(prevState => ({
+        setFilter((prevState) => ({
             ...prevState,
-            category: event.target.value
+            category: event.target.value,
         }));
     };
 

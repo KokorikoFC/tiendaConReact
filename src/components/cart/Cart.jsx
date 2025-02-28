@@ -1,5 +1,5 @@
 import "./Cart.css";
-import { useId } from "react";
+import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../hooks/useCart.jsx";
 
@@ -21,27 +21,51 @@ function CartItem({ name, price, image, quantity, product }) {
         </li>
     );
 }
+
 export function Cart() {
-    const cartCheckBoxId = useId();
     const { cart, clearCart } = useCart();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleCart = () => {
+        setIsOpen((prev) => !prev);
+        console.log("Carrito abierto:", !isOpen);
+    };
+
     return (
         <>
-            <label className="cartBtn" htmlFor={cartCheckBoxId}>
+            <button
+                className="cartBtn"
+                onClick={toggleCart}
+                aria-label="Abrir carrito"
+            >
                 <FaShoppingCart className="cart-icon" />
-            </label>
-            <input type="checkbox" id={cartCheckBoxId} hidden />
-            <aside className="cart">
-                <ul>
-                    {cart.map((product) => (
-                        <CartItem
-                            key={product.id}
-                            product={product}
-                            {...product}
-                        />
-                    ))}
-                </ul>
-                <button onClick={clearCart}>Limpiar</button>
-            </aside>
+            </button>
+
+            {isOpen && (
+                <>
+                    <div
+                        className={`overlay ${isOpen ? "show" : ""}`}
+                        onClick={toggleCart}
+                    ></div>
+
+                    <aside className={`cart ${isOpen ? "open" : ""}`}>
+                        <ul>
+                            {cart.length === 0 ? (
+                                <p>El carrito está vacío</p>
+                            ) : (
+                                cart.map((product) => (
+                                    <CartItem
+                                        key={product.id}
+                                        product={product}
+                                        {...product}
+                                    />
+                                ))
+                            )}
+                        </ul>
+                        <button onClick={clearCart}>Limpiar carrito</button>
+                    </aside>
+                </>
+            )}
         </>
     );
 }
