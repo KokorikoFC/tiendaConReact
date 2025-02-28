@@ -1,0 +1,21 @@
+.product-container{
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li{
+    width: 300px;
+    border: 2px solid black;
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
