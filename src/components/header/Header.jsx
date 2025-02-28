@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Header.css'; // Importa el archivo CSS
+import Cart from "../cart/Cart";
+
 
 function Header() {
     return (
@@ -14,9 +16,7 @@ function Header() {
             <div className="header-icons-container"> {/* Usa className="header-icons-container" */}
                 <div className="header-cart-icon"> {/* Usa className="header-cart-icon" */}
                     
-                    <Link to="/carrito" className="header-cart-icon"> {/* Usa className="header-cart-icon" también en el Link si quieres */}
-                        🛒
-                    </Link>
+                <Cart />
                 </div>
                 <div className="header-profile-icon"> {/* Usa className="header-profile-icon" */}
                 </div>

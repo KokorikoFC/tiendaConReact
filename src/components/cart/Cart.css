@@ -1,0 +1,29 @@
+.cartBtn {
+    transition: transform 0.3s ease-in-out; /* Para hacer el hover suave */
+}
+
+.cartBtn ~ input:checked ~ .cart {
+    height: 100%;
+    display: block;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el ratón */
+}
+
+
+.cart {
+  background: #ead1d1;
+  display: none;
+  padding: 32px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 400px;
+}

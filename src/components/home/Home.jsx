@@ -2,8 +2,10 @@ import { useNavigate } from "react-router-dom";
 import Header from "../header/Header"; 
 import Product from "../product/Product";
 import Filters from "../filters/Filters";
+import Cart from "../cart/Cart";
 import { products } from "./../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
+
 
 function Home() {
     const navigate = useNavigate();
@@ -21,6 +23,7 @@ function Home() {
             <h1>Página Principal (Home)</h1>
             <p>Esta es la página de inicio.</p>
             <button onClick={goToTemplate}>Ir a Template</button>
+            <Cart />
             <div>
                 <Filters />
                 <Product products={filteredProducts} />
