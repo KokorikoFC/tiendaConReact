@@ -2,19 +2,299 @@
     "products": [
         {
             "id": 1,
-            "name": "Pastel de frutas",
-            "description": "Pastel de frutas con crema y frutas frescas de temporada.",
-            "price": 5,
+            "name": "Guava Danish",
+            "description": "Delicate danish pastry filled with sweet and tropical guava cream.",
+            "price": 3.0,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/guava_danish.png"
+        },
+        {
+            "id": 2,
+            "name": "Caramel Apple Pie",
+            "description": "Classic apple pie with a rich caramel topping and flaky crust.",
+            "price": 4.0,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/caramel_apple_pie.png"
+        },
+        {
+            "id": 3,
+            "name": "Almond Croissant",
+            "description": "Buttery and flaky croissant filled with sweet almond cream.",
+            "price": 3.5,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/almond_croissant.png"
+        },
+        {
+            "id": 4,
+            "name": "Fruit Pastry",
+            "description": "Colorful pastry topped with fresh seasonal fruits and light cream.",
+            "price": 5.0,
             "category": "pasteleria",
             "image": "src/assets/products_img/fruit_pastry.png"
         },
         {
-            "id": 2,
-            "name": "Pan",
-            "description": "Pastel de frutas con crema y frutas frescas de temporada.",
-            "price": 5,
+            "id": 5,
+            "name": "Pain Au Chocolat",
+            "description": "Traditional French pastry made of a flaky, buttery dough with layers of dark chocolate.",
+            "price": 3.0,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/pain_au_chocolat.png"
+        },
+        {
+            "id": 6,
+            "name": "Strawberry Croissant",
+            "description": "Flaky croissant filled with fresh strawberries and a delicate cream.",
+            "price": 4.0,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/strawberry_croissant.png"
+        },
+        {
+            "id": 7,
+            "name": "Croissant",
+            "description": "Classic buttery and flaky croissant, perfect for breakfast or a snack.",
+            "price": 2.5,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/croissant.png"
+        },
+        {
+            "id": 8,
+            "name": "Yuzu Pie",
+            "description": "Citrusy and refreshing pie with a yuzu custard filling.",
+            "price": 4.5,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/yuzu_pie.png"
+        },
+        {
+            "id": 9,
+            "name": "Chocolate Croissant",
+            "description": "Delicious croissant with rich chocolate filling and dusting of cocoa powder.",
+            "price": 3.5,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/chocolate_croissant.png"
+        },
+        {
+            "id": 10,
+            "name": "Spinach Feta Danish",
+            "description": "Savory danish filled with spinach and feta cheese, a flavorful option.",
+            "price": 4.0,
+            "category": "pasteleria",
+            "image": "src/assets/products_img/spinach_feta_danish.png"
+        },
+        {
+            "id": 11,
+            "name": "Baguette",
+            "description": "Classic long and thin French bread with a crisp crust.",
+            "price": 3.0,
             "category": "panaderia",
-            "image": "src/assets/products_img/fruit_pastry.png"
+            "image": "src/assets/products_img/baguette.png"
+        },
+        {
+            "id": 12,
+            "name": "Chocolate Dipped Belgium Waffle",
+            "description": "Sweet Belgium waffle dipped in rich chocolate.",
+            "price": 4.5,
+            "category": "panaderia",
+            "image": "src/assets/products_img/chocolate_dipped_belgium_waffle.png"
+        },
+        {
+            "id": 13,
+            "name": "Salt & Butter Roll",
+            "description": "Simple roll with a touch of salt and rich butter flavor.",
+            "price": 2.8,
+            "category": "panaderia",
+            "image": "src/assets/products_img/salt_butter_roll.png"
+        },
+        {
+            "id": 14,
+            "name": "Buttercream Bread",
+            "description": "Soft bread filled with sweet buttercream.",
+            "price": 3.5,
+            "category": "panaderia",
+            "image": "src/assets/products_img/buttercream_bread.png"
+        },
+        {
+            "id": 15,
+            "name": "Blueberry Cream Cheese Bread",
+            "description": "Bread with blueberries and cream cheese filling.",
+            "price": 4.0,
+            "category": "panaderia",
+            "image": "src/assets/products_img/blueberry_cream_cheese_bread.png"
+        },
+        {
+            "id": 16,
+            "name": "Raisin Bread",
+            "description": "Sweet bread with juicy raisins throughout.",
+            "price": 3.2,
+            "category": "panaderia",
+            "image": "src/assets/products_img/raisin_bread.png"
+        },
+        {
+            "id": 17,
+            "name": "Multi-Grain Pan Bread",
+            "description": "Healthy and hearty multi-grain bread loaf.",
+            "price": 4.8,
+            "category": "panaderia",
+            "image": "src/assets/products_img/multi_grain_pan_bread.png"
+        },
+        {
+            "id": 18,
+            "name": "Sweet Frank Roll",
+            "description": "Sweet and soft roll, perfect for a snack.",
+            "price": 2.5,
+            "category": "panaderia",
+            "image": "src/assets/products_img/sweet_frank_roll.png"
+        },
+        {
+            "id": 19,
+            "name": "Croque Monsieur",
+            "description": "Classic French ham and cheese sandwich, baked until golden.",
+            "price": 5.5,
+            "category": "panaderia",
+            "image": "src/assets/products_img/croque_monsieur.png"
+        },
+        {
+            "id": 20,
+            "name": "Soboro Bread",
+            "description": "Sweet bread with a crumbly peanut butter topping.",
+            "price": 3.0,
+            "category": "panaderia",
+            "image": "src/assets/products_img/soboro_bread.png"
+        },
+        {
+            "id": 21,
+            "name": "Earl Grey Cloud",
+            "description": "Light and airy cake infused with Earl Grey tea flavor.",
+            "price": 6.0,
+            "category": "pasteles",
+            "image": "src/assets/products_img/earl_grey_cloud.png"
+        },
+        {
+            "id": 22,
+            "name": "Blueberry Yogurt #3",
+            "description": "Yogurt cake with fresh blueberries, light and refreshing.",
+            "price": 6.5,
+            "category": "pasteles",
+            "image": "src/assets/products_img/blueberry_yogurt_3.png"
+        },
+        {
+            "id": 23,
+            "name": "Blueberry Yogurt #2",
+            "description": "Another variation of blueberry yogurt cake, creamy and delicious.",
+            "price": 6.5,
+            "category": "pasteles",
+            "image": "src/assets/products_img/blueberry_yogurt_2.png"
+        },
+        {
+            "id": 24,
+            "name": "Strawberry Lychee",
+            "description": "Cake combining sweet strawberries and exotic lychee fruit.",
+            "price": 7.0,
+            "category": "pasteles",
+            "image": "src/assets/products_img/strawberry_lychee.png"
+        },
+        {
+            "id": 25,
+            "name": "Strawberry Gateau",
+            "description": "Elegant gateau cake with layers of strawberry and cream.",
+            "price": 7.5,
+            "category": "pasteles",
+            "image": "src/assets/products_img/strawberry_gateau.png"
+        },
+        {
+            "id": 26,
+            "name": "Cloud Cake #3",
+            "description": "Light and fluffy cloud cake, a melt-in-your-mouth experience.",
+            "price": 5.5,
+            "category": "pasteles",
+            "image": "src/assets/products_img/cloud_cake_3.png"
+        },
+        {
+            "id": 27,
+            "name": "Cloud Cake #2",
+            "description": "Another delightful cloud cake variation, soft and airy.",
+            "price": 5.5,
+            "category": "pasteles",
+            "image": "src/assets/products_img/cloud_cake_2.png"
+        },
+        {
+            "id": 28,
+            "name": "Strawberry Cloud Cake",
+            "description": "Cloud cake infused with sweet strawberry flavor.",
+            "price": 6.0,
+            "category": "pasteles",
+            "image": "src/assets/products_img/strawberry_cloud_cake.png"
+        },
+        {
+            "id": 29,
+            "name": "Green Tea Cloud Cake",
+            "description": "Cloud cake with a delicate green tea flavor.",
+            "price": 6.0,
+            "category": "pasteles",
+            "image": "src/assets/products_img/green_tea_cloud_cake.png"
+        },
+        {
+            "id": 30,
+            "name": "Peach Cream Cake",
+            "description": "Creamy cake with sweet peach pieces.",
+            "price": 7.0,
+            "category": "pasteles",
+            "image": "src/assets/products_img/peach_cream_cake.png"
+        },
+        {
+            "id": 31,
+            "name": "Egg & Cheese Morning Bun",
+            "description": "Fluffy morning bun filled with egg and melted cheese.",
+            "price": 4.5,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/egg_cheese_morning_bun.png"
+        },
+        {
+            "id": 32,
+            "name": "Egg & Bacon Cheese Croissant Sandwich",
+            "description": "Croissant sandwich with egg, crispy bacon, and melted cheese.",
+            "price": 5.5,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/egg_bacon_cheese_croissant_sandwich.png"
+        },
+        {
+            "id": 33,
+            "name": "Jalapeño Ham & Cheese Croissant Sandwich",
+            "description": "Croissant sandwich with ham, cheese, and a spicy jalapeño kick.",
+            "price": 6.0,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/jalapeno_ham_cheese_croissant_sandwich.png"
+        },
+        {
+            "id": 34,
+            "name": "Turkey & Cheese Croissant",
+            "description": "Classic croissant sandwich with turkey and cheese.",
+            "price": 5.0,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/turkey_cheese_croissant.png"
+        },
+        {
+            "id": 35,
+            "name": "Tuna Salad Sandwich",
+            "description": "Fresh tuna salad sandwich on your choice of bread.",
+            "price": 5.8,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/tuna_salad_sandwich.png"
+        },
+        {
+            "id": 36,
+            "name": "Chicken Club Sandwich",
+            "description": "Stacked club sandwich with chicken, bacon, lettuce, and tomato.",
+            "price": 7.0,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/chicken_club_sandwich.png"
+        },
+        {
+            "id": 37,
+            "name": "Caprese Sandwich",
+            "description": "Vegetarian sandwich with fresh mozzarella, tomato, and basil.",
+            "price": 6.5,
+            "category": "sandwiches",
+            "image": "src/assets/products_img/caprese_sandwich.png"
         }
     ]
 }
