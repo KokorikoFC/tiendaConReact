@@ -3,3 +3,7 @@
     min-height: 100vh;
     background-color: var(--beige);
 }
+
+.products-section{
+    border: 2px solid black;
+}

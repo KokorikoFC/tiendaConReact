@@ -26,7 +26,7 @@ function Home() {
                 <p>Esta es la página de inicio.</p>
                 <button onClick={goToTemplate}>Ir a Template</button>
                 <Cart />
-                <div>
+                <div className="products-section">
                     <Filters />
                     <Product products={filteredProducts} />
                 </div>
