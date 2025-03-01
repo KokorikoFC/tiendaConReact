@@ -1,9 +1,13 @@
 .home{
-    width: 100vw;
     min-height: 100vh;
     background-color: var(--beige);
 }
 
 .products-section{
     border: 2px solid black;
+}
+
+.hero{
+    background-color: var(--blanco);
+    height: 100vh;
 }

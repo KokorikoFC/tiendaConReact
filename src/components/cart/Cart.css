@@ -38,7 +38,9 @@ aside {
     z-index: 11;
     cursor: default;
 }
-
+aside img{
+  height: 200px;
+}
 .cart.open {
     display: block;
 }

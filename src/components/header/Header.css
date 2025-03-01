@@ -7,6 +7,9 @@
     padding: 10px 20px;
     background-color: #f0f0f0;
     height: 60px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
 }
 
 .header-logo {

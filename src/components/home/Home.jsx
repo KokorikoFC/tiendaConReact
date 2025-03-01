@@ -3,7 +3,7 @@ import "./Home.css";
 import Header from "../header/Header";
 import Product from "../product/Product";
 import Filters from "../filters/Filters";
-import Cart from "../cart/Cart";
+import Footer from "../footer/Footer";
 import { products } from "./../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
 import { CartProvider } from "../../context/cartContext";
@@ -22,14 +22,16 @@ function Home() {
         <CartProvider>
             <div className="home">
                 <Header />
+                <div className="hero">
                 <h1>Página Principal (Home)</h1>
                 <p>Esta es la página de inicio.</p>
                 <button onClick={goToTemplate}>Ir a Template</button>
-                <Cart />
+                </div>
                 <div className="products-section">
                     <Filters />
                     <Product products={filteredProducts} />
                 </div>
+                <Footer />
             </div>
         </CartProvider>
     );
