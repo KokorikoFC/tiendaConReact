@@ -1,5 +1,5 @@
 import "./Cart.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../hooks/useCart.jsx";
 
@@ -30,6 +30,20 @@ export function Cart() {
         setIsOpen((prev) => !prev);
         console.log("Carrito abierto:", !isOpen);
     };
+
+    // Efecto para agregar o quitar la clase 'no-scroll' cuando el carrito está abierto
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+
+        // Limpiar clase 'no-scroll' cuando el componente se desmonte
+        return () => {
+            document.body.classList.remove("no-scroll");
+        };
+    }, [isOpen]);
 
     return (
         <>

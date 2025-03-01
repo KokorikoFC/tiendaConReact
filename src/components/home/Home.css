@@ -10,4 +10,5 @@
 .hero{
     background-color: var(--blanco);
     height: 100vh;
+    padding-top: 100px;
 }
