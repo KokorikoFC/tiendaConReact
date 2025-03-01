@@ -24,7 +24,7 @@ function Filters() {
                     { name: "Pastelería", value: "pasteleria", icon: <LuCakeSlice /> },
                     { name: "Panadería", value: "panaderia", icon: <PiBreadDuotone /> },
                     { name: "Sándwiches", value: "sandwiches", icon: <PiBreadDuotone /> },
-                    { name: "Bollería", value: "pastry", icon: <PiBreadDuotone /> },
+                    { name: "Bollería", value: "bolleria", icon: <PiBreadDuotone /> },
                 ].map((category) => (
                     <div 
                         key={category.value} 
