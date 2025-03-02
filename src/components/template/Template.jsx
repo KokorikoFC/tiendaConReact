@@ -1,9 +1,15 @@
-import './Template.css'
+import './Template.css';
 import Header from '../header/Header';
-import CherryJuice from '../../assets/img/image.png';
+import { useCart } from "../../hooks/useCart.jsx";
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Template() {
+    const { addToCart } = useCart();
+
+    const { state } = useLocation();
+    const product = state?.product;
+
     const [quantity, setQuantity] = useState(2);
 
     const incrementQuantity = () => {
@@ -16,15 +22,19 @@ function Template() {
         }
     };
 
+    if (!product) {
+        return <h2>No se encontraron datos del producto</h2>;
+    }
+
     return (
         <main>
-            <Header /> {/* Usa el componente Header aquí */}
+            <Header />
             <div className="template-container">
                 <div className="info-container">
                     <div className="title-container">
                         <div className='decoration'></div>
                         <div className="title">
-                            <h1>Fresh Cherry Juice</h1>
+                            <h1>{product.name}</h1>
                         </div>
                     </div>
                     <div className="price-container">
@@ -32,25 +42,14 @@ function Template() {
                             <span>⭐⭐⭐⭐⭐</span>
                         </div>
                         <div className="price">
-                            <span>$29.00</span>
+                            <span>${product.price}</span>
                         </div>
                     </div>
                     <div className="description-container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet nunc in sodales facilisis commodo. Dolor cursus cursus arcu urna integer. Quis nutrum lorem potenti una lacus. Tempus tempus, uma aenean pellentesque. Fames malesuada quam mattis ut eu sit riisus, augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet nunc in sodales facilisis commodo. Dolor cursus cursus arcu urna integer. Quis nutrum lorem potenti una lacus. Tempus tempus, uma aenean pellentesque. Fames malesuada quam mattis ut eu sit riisus, augue.</p>
+                        <p>{product.description}</p>
                     </div>
                     <div className="category-container">
-                        <p>Categoria</p>
-                        <div className="category">
-                            <div className="category-item">
-
-                            </div>
-                            <div className="category-item">
-
-                            </div>
-                            <div className="category-item">
-
-                            </div>
-                        </div>
+                        <p>Categoria: {product.category}</p>
                     </div>
                     <div className="cart-container">
                         <div className="quantity-container">
@@ -58,18 +57,18 @@ function Template() {
                             <span>{quantity}</span>
                             <button className="quantity-button" onClick={incrementQuantity}>+</button>
                         </div>
-                        <button className="add-to-cart-button">AÑADIR AL CARRITO</button>
+                        <button className="add-to-cart-button" onClick={() => addToCart(product)}>AÑADIR AL CARRITO</button>
                     </div>
                 </div>
 
                 <div className="img-container">
                     <div className="circle">
-                        <img src={CherryJuice} alt="Fresh Cherry Juice" />
+                        <img src={product.image} alt={product.name} />
                     </div>
                 </div>
             </div>
         </main>
-    )
+    );
 }
 
-export default Template
+export default Template;

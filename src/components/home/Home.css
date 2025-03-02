@@ -1,14 +1,115 @@
-.home{
+.home {
     min-height: 100vh;
     background-color: var(--beige);
+    color: var(--grey);
 }
 
-.products-section{
+.products-section {
     border: 2px solid black;
 }
 
-.hero{
+.hero {
     background-color: var(--blanco);
     height: 100vh;
     padding-top: 100px;
+}
+
+.aboutUs-section {
+    background-color: var(--verde);
+    width: 100%;
+    background-image: url("src/assets/img/upscalemedia-transformed.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.aboutUs-infoCard {
+    position: relative;
+    height: 600px;
+}
+
+.flower1 {
+    position: absolute;
+    top: -40%;
+    left: 8%;
+    height: 100px;
+}
+
+.flower2 {
+    position: absolute;
+    top: -40%;
+    right: 8%;
+    height: 100px;
+}
+
+.flower3 {
+    position: absolute;
+    bottom: -8%;
+    left: 25%;
+    height: 80px;
+}
+
+.flower4 {
+    position: absolute;
+    top: -50%;
+    left: 13%;
+    height: 60px;
+}
+
+.about-img {
+    height: 90%;
+    overflow: hidden;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text1,
+.about-text2,
+.about-text3 {
+    width: 18%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.about-text1 {
+    top: 0;
+    left: 10%;
+}
+.about-text2 {
+    top: 15%;
+    right: 10%;
+}
+.about-text3 {
+    top: 50%;
+    right: 10%;
+}
+
+.subscribe-section{
+    height: 600px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-section-cont{
+    height: 80%;
+    width: 75%;
+    background-image: url("src/assets/img/backGround_green.png");
+    background-position: center;
+    background-size: 35%;
+    background-attachment: fixed;
+    border-radius: 20px;
 }
