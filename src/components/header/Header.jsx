@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import Cart from "../cart/Cart";
 import { FaUserCircle } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
+
 
 function Header() {
+    const navigate = useNavigate();
     const [headerOpacity, setHeaderOpacity] = useState(1);
 
     useEffect(() => {
@@ -36,7 +39,7 @@ function Header() {
                     <Cart />
                 </div>
                 <div className="header-profile-icon">
-                    <FaUserCircle className="header-profile-icon-svg" />
+                    <FaUserCircle className="header-profile-icon-svg" onClick={() => navigate("/login")} />
                 </div>
             </div>
         </header>
