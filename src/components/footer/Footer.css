@@ -1,5 +1,13 @@
-.footer{
+.footer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contenido {
     height: 200px;
     background-color: var(--verde);
-    margin-top: 100px;
-}
+  }
+  
+  .footer svg {
+    display: block;
+  }
