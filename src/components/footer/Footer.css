@@ -1,5 +1,47 @@
-.footer{
-    height: 200px;
+.footer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contenido {
     background-color: var(--verde);
-    margin-top: 100px;
-}
+    color: var(--grey);
+    padding: 20px;
+    padding-top: 50px;
+    height: 250px;
+    font-weight: 600;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey);
+  }
+  
+  .footer svg {
+      display: block;
+  }

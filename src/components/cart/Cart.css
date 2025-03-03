@@ -1,5 +1,5 @@
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 
@@ -20,12 +20,12 @@
 }
 
 .cart-icon {
-    font-size: 24px;
+    font-size: 36px;
     transition: transform 0.3s ease;
 }
 
 .cart-icon:hover {
-    transform: scale(1.2);
+    color: black;
 }
 
 .overlay {
@@ -39,13 +39,16 @@
     z-index: 10;
     cursor: default;
 }
+
 aside {
     z-index: 11;
     cursor: default;
 }
-aside img{
-  height: 200px;
+
+aside img {
+    height: 200px;
 }
+
 .cart.open {
     display: block;
 }

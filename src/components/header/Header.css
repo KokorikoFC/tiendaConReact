@@ -5,31 +5,52 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: rgba(202, 209, 163, 0.719);
     height: 60px;
     position: fixed;
     z-index: 1000;
     width: 100%;
     top: 0;
+    transition: background-color 0.3s ease;
 }
 
 .header-logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: var(--grey);
+    /* Cambiado a var(--grey) */
+    text-decoration: none;
 }
 
 .header-icons-container {
     display: flex;
     gap: 20px;
-    /* Espacio entre iconos */
+    align-items: center;
+    
 }
 
-.header-cart-icon {
-    font-size: 1.5em;
-    cursor: pointer;
-}
 
+.header-cart-icon,
 .header-profile-icon {
     font-size: 1.5em;
     cursor: pointer;
+    color: var(--grey);
+    /* Cambiado a var(--grey) */
+}
+
+.header-profile-icon:hover {
+    color: black;
+}
+
+
+.header-cart-icon-svg,
+.header-profile-icon-svg {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--grey);
+    /* Cambiado a var(--grey) */
+}
+
+.header-profile-icon-svg:hover {
+    color: black;
 }
