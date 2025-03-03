@@ -11,9 +11,36 @@ function Footer() {
         ></path>
       </svg>
       <div className="contenido">
-        
-
-        
+        <div className="footer-content">
+          <div className="footer-section">
+            <h4>Información</h4>
+            <ul>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Productos</h4>
+            <ul>
+              <li><a href="#">Tartas</a></li>
+              <li><a href="#">Sandwiches</a></li>
+              <li><a href="#">Bollería</a></li>
+              <li><a href="#">Panes</a></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h4>Síguenos</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Repostería Asiática. Todos los derechos reservados.</p>
+        </div>
       </div>
     </div>
   );

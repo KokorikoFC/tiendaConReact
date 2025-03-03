@@ -1,6 +1,6 @@
 import "./Cart.css";
 import { useState, useEffect } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingBasket } from "react-icons/fa";
 import { useCart } from "../../hooks/useCart.jsx";
 
 function CartItem({ name, price, image, quantity, product }) {
@@ -47,13 +47,13 @@ export function Cart() {
 
     return (
         <>
-            <button
+            <div // Cambiado button por div
                 className="cartBtn"
                 onClick={toggleCart}
                 aria-label="Abrir carrito"
             >
-                <FaShoppingCart className="cart-icon" />
-            </button>
+                <FaShoppingBasket className="cart-icon" /> {/* Icono de cesta  */}
+            </div>
 
             {isOpen && (
                 <>
