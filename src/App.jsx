@@ -9,7 +9,8 @@ import Cart from './components/cart/Cart';
 function App() {
   return (
     <Routes> {/* Define el contenedor de rutas */}
-        <Route path="/" element={<AuthPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<AuthPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/template" element={<Template />} />
         <Route path="/cart" element={<Cart/>} />

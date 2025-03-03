@@ -6,8 +6,11 @@ import Footer from "../footer/Footer";
 import { products } from "./../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
 import { CartProvider } from "../../context/cartContext";
+import { useNavigate } from "react-router-dom";
+
 
 function Home() {
+    const navigate = useNavigate();
     const { filterProducts } = useFilter();
 
     const filteredProducts = filterProducts(products);
@@ -17,8 +20,10 @@ function Home() {
             <div className="home">
                 <Header />
                 <div className="hero">
-                    <h1>Página Principal (Home)</h1>
-                    <p>Esta es la página de inicio.</p>
+                    <h1>JAVI NO HIZO SU PARTE</h1>
+                    <h2>OTRA VEZ</h2>
+                    <div className="hero-circle"></div>
+                    <img className="cake-img" src="src/assets/img/tarta_dibujo-Photoroom.png" alt="" />
                 </div>
                 <div className="products-section">
                     <svg
@@ -47,15 +52,34 @@ function Home() {
                         ></path>
                     </svg>
                     <div className="aboutUs-infoCard">
-                        <img src="src/assets/img/flor1.png" alt="" className="flower1"/>
-                        <img src="src/assets/img/flor2.png" alt="" className="flower2"/>
-                        <img src="src/assets/img/flor3.png" alt="" className="flower3"/>
-                        <img src="src/assets/img/flor3.png" alt="" className="flower4"/>
+                        <img
+                            src="src/assets/img/flor1.png"
+                            alt=""
+                            className="flower1"
+                        />
+                        <img
+                            src="src/assets/img/flor2.png"
+                            alt=""
+                            className="flower2"
+                        />
+                        <img
+                            src="src/assets/img/flor3.png"
+                            alt=""
+                            className="flower3"
+                        />
+                        <img
+                            src="src/assets/img/flor3.png"
+                            alt=""
+                            className="flower4"
+                        />
                         <div className="about-img">
-                            <img src="src/assets/img/649249d29a20bd6bc3deade5_Green_Tea_Cloud_Cake.png" alt="" />
+                            <img
+                                src="src/assets/img/649249d29a20bd6bc3deade5_Green_Tea_Cloud_Cake.png"
+                                alt=""
+                            />
                         </div>
                         <div className="about-text1">
-                            <h4>Pasteles frescos y deliciosos</h4>
+                            <h4>Pasteles recién hechos</h4>
                             <p>
                                 En nuestra pastelería, nos esforzamos por
                                 ofrecerte lo mejor de lo mejor. Todos nuestros
@@ -95,7 +119,42 @@ function Home() {
                 </div>
 
                 <div className="subscribe-section">
-                    <div className="subscribe-section-cont"></div>
+                    <div className="subscribe-section-cont">
+                        <img
+                            className="wave1"
+                            src="src/assets/img/wave.png"
+                            alt=""
+                        />
+                        <img
+                            className="wave2"
+                            src="src/assets/img/wave.png"
+                            alt=""
+                        />
+                        <img
+                            className="wave3"
+                            src="src/assets/img/wave2.png"
+                            alt=""
+                        />
+                        <img
+                            className="wave4"
+                            src="src/assets/img/wave2.png"
+                            alt=""
+                        />
+                        <div className="subscribe-text-cont">
+                            <div className="text-cont">
+                                <h4>
+                                Suscríbete y descubre más
+                                </h4>
+                                <hr />
+                                <p>
+                                    Recibe las últimas noticias sobre nuestros
+                                    productos, ofertas especiales y eventos.
+                                </p>
+                                <button onClick={() => navigate("/login")}>Suscríbete</button>
+                            </div>
+                            <img src="src/assets/img/tarta_dibujo-Photoroom.png" alt="" />
+                        </div>
+                    </div>
                 </div>
                 <Footer />
             </div>
