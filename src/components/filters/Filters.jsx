@@ -2,6 +2,10 @@ import "./Filters.css";
 import { useFilter } from "../../hooks/useFilters.jsx";
 import { PiBreadDuotone } from "react-icons/pi";
 import { LuCakeSlice } from "react-icons/lu";
+import { LuSandwich } from "react-icons/lu";
+import { LuCroissant } from "react-icons/lu";
+
+
 import { useState } from "react";
 
 function Filters() {
@@ -23,8 +27,8 @@ function Filters() {
                     { name: "Todos", value: "all", icon: <PiBreadDuotone /> },
                     { name: "Pastelería", value: "pasteleria", icon: <LuCakeSlice /> },
                     { name: "Panadería", value: "panaderia", icon: <PiBreadDuotone /> },
-                    { name: "Sándwiches", value: "sandwiches", icon: <PiBreadDuotone /> },
-                    { name: "Bollería", value: "bolleria", icon: <PiBreadDuotone /> },
+                    { name: "Sándwiches", value: "sandwiches", icon: <LuSandwich /> },
+                    { name: "Bollería", value: "bolleria", icon: <LuCroissant /> },
                 ].map((category) => (
                     <div 
                         key={category.value} 

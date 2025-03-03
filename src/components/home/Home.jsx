@@ -20,8 +20,13 @@ function Home() {
             <div className="home">
                 <Header />
                 <div className="hero">
-                    <h1>JAVI NO HIZO SU PARTE</h1>
-                    <h2>OTRA VEZ</h2>
+                    <div className="hero-text">
+                    <h1>Delicias recién horneadas <br />para los amantes de la repostería</h1>
+                    <h2>Descubre la dulzura en su forma más delicada. En nuestra pastelería, fusionamos recetas tradicionales asiáticas con técnicas artesanales para crear postres únicos que deleitan tanto a la vista como al paladar.</h2>
+                    </div>
+                    <img className="strawberry1" src="src/assets/img/fresa-Photoroom.png" alt="" />
+                    <img className="strawberry2" src="src/assets/img/fresa-Photoroom.png" alt="" />
+                    <img className="strawberry3" src="src/assets/img/fresa-Photoroom.png" alt="" />
                     <div className="hero-circle"></div>
                     <img className="cake-img" src="src/assets/img/tarta_dibujo-Photoroom.png" alt="" />
                 </div>
