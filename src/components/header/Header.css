@@ -12,34 +12,37 @@
     width: 100%;
     top: 0;
     transition: background-color 0.3s ease;
+    overflow: hidden;
 }
 
 .header-logo {
+    height: 100%;
     font-size: 1.5em;
     font-weight: bold;
     color: var(--grey);
-    /* Cambiado a var(--grey) */
     text-decoration: none;
+}
+.header-logo img {
+    height: 100%;
+    margin: auto;
+}
+.header-logo:hover {
+    transform: rotate(15deg);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .header-icons-container {
     display: flex;
     gap: 20px;
     align-items: center;
-    
 }
-
 
 .header-cart-icon,
 .header-profile-icon {
     font-size: 1.5em;
     cursor: pointer;
     color: var(--grey);
-    /* Cambiado a var(--grey) */
-}
-
-.header-profile-icon:hover {
-    color: black;
 }
 
 
@@ -48,9 +51,9 @@
     font-size: 1.5em;
     cursor: pointer;
     color: var(--grey);
-    /* Cambiado a var(--grey) */
 }
 
-.header-profile-icon-svg:hover {
-    color: black;
+.header-profile-icon-svg:hover{
+    color: var(--rojo);
+    transition: all 0.2s;
 }

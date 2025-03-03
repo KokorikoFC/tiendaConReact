@@ -22,7 +22,7 @@ function Home() {
                 <div className="hero">
                     <div className="hero-text">
                     <h1>Delicias recién horneadas <br />para los amantes de la repostería</h1>
-                    <h2>Descubre la dulzura en su forma más delicada. En nuestra pastelería, fusionamos recetas tradicionales asiáticas con técnicas artesanales para crear postres únicos que deleitan tanto a la vista como al paladar.</h2>
+                    <h2>Descubre la dulzura en su forma más delicada. <br />En nuestra pastelería, fusionamos recetas tradicionales asiáticas con técnicas artesanales para crear postres únicos que deleitan tanto a la vista como al paladar.</h2>
                     </div>
                     <img className="strawberry1" src="src/assets/img/fresa-Photoroom.png" alt="" />
                     <img className="strawberry2" src="src/assets/img/fresa-Photoroom.png" alt="" />

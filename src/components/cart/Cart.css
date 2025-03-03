@@ -24,7 +24,8 @@
 }
 
 .cart-icon:hover {
-    color: black;
+    color: var(--rojo);
+    transition: all 0.2s;
 }
 
 .overlay {
@@ -106,7 +107,7 @@ aside hr {
     background-color: var(--verde);
     border-radius: 5px;
 }
-.quantity-btn{
+.quantity-btn {
     color: var(--grey);
     font-size: 20px;
     font-weight: 700;
@@ -117,7 +118,7 @@ aside hr {
     transition: all 0.2s;
 }
 
-.quantity-controls p{
+.quantity-controls p {
     font-size: 18px;
     width: 35%;
     font-weight: 700;
@@ -134,7 +135,7 @@ aside hr {
     font-size: 25px;
 }
 
-.buy-btn{
+.buy-btn {
     width: 90%;
     margin: 50px auto;
     padding: 10px;
