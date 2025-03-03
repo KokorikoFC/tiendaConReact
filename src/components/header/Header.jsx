@@ -14,9 +14,9 @@ function Header() {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             if (scrollY > 0) {
-                setHeaderOpacity(0);
-            } else {
                 setHeaderOpacity(1);
+            } else {
+                setHeaderOpacity(0);
             }
         };
 

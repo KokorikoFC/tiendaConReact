@@ -2,21 +2,29 @@ import "./Cart.css";
 import { useState, useEffect } from "react";
 import { FaShoppingBasket } from "react-icons/fa";
 import { useCart } from "../../hooks/useCart.jsx";
+import { TiPlus } from "react-icons/ti";
+import { TiMinus } from "react-icons/ti";
+
 
 function CartItem({ name, price, image, quantity, product }) {
     const { addToCart, removeOneFromCart } = useCart();
 
     return (
-        <li>
-            <img src={image} alt={name} />
-            <div>
-                <strong>{name}</strong> - ${price}
+        <li className="cart-item">
+            <div className="cart-item-info">
+                <img src={image} alt={name} />
+                <p>
+                    <strong>{name}</strong>
+                </p>
             </div>
+            <div className="cart-item-controls">
+                <div className="quantity-controls">
+                    <TiMinus className="quantity-btn" onClick={() => removeOneFromCart(product)} />
+                    <p>{quantity}</p>
+                    <TiPlus className="quantity-btn" onClick={() => addToCart(product)} />
+                </div>
+                <p className="quantity-controls-price">{(price * quantity).toFixed(2)} €</p>
 
-            <div className="quantity-controls">
-                <button onClick={() => removeOneFromCart(product)}>-</button>
-                <small>Qty: {quantity}</small>
-                <button onClick={() => addToCart(product)}>+</button>
             </div>
         </li>
     );
@@ -47,12 +55,12 @@ export function Cart() {
 
     return (
         <>
-            <div // Cambiado button por div
+            <div 
                 className="cartBtn"
                 onClick={toggleCart}
                 aria-label="Abrir carrito"
             >
-                <FaShoppingBasket className="cart-icon" /> {/* Icono de cesta  */}
+                <FaShoppingBasket className="cart-icon" />{" "}
             </div>
 
             {isOpen && (
@@ -63,20 +71,25 @@ export function Cart() {
                     ></div>
 
                     <aside className={`cart ${isOpen ? "open" : ""}`}>
-                        <ul>
+                    <h3>Carrito</h3>
+                    <hr />
+                        <ul className="cart-items-list">
                             {cart.length === 0 ? (
                                 <p>El carrito está vacío</p>
                             ) : (
+                                
                                 cart.map((product) => (
                                     <CartItem
                                         key={product.id}
                                         product={product}
                                         {...product}
                                     />
+                                
                                 ))
                             )}
+                        <button className="buy-btn" onClick={clearCart}>Comprar</button>
+                            
                         </ul>
-                        <button onClick={clearCart}>Limpiar carrito</button>
                     </aside>
                 </>
             )}

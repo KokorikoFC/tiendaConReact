@@ -4,6 +4,8 @@ import { PiBreadDuotone } from "react-icons/pi";
 import { LuCakeSlice } from "react-icons/lu";
 import { LuSandwich } from "react-icons/lu";
 import { LuCroissant } from "react-icons/lu";
+import { LuCake } from "react-icons/lu";
+
 
 
 import { useState } from "react";
@@ -24,7 +26,7 @@ function Filters() {
         <div className="filters">
             <div className="filter-buttons">
                 {[
-                    { name: "Todos", value: "all", icon: <PiBreadDuotone /> },
+                    { name: "Todos", value: "all", icon: <LuCake /> },
                     { name: "Pastelería", value: "pasteleria", icon: <LuCakeSlice /> },
                     { name: "Panadería", value: "panaderia", icon: <PiBreadDuotone /> },
                     { name: "Sándwiches", value: "sandwiches", icon: <LuSandwich /> },
