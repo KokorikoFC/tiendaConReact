@@ -3,7 +3,8 @@
         {
             "id": 1,
             "name": "Guava Danish",
-            "description": "Delicate danish pastry filled with sweet and tropical guava cream.",
+            "description": "Delicado danés relleno con crema dulce y tropical de guayaba.",
+            "longDescription": "Delicado danés relleno con crema dulce y tropical de guayaba. El equilibrio perfecto entre la masa hojaldrada y el relleno afrutado, este danés de guayaba es un delicioso capricho para cualquier momento del día.",
             "price": 3.0,
             "category": "bolleria",
             "image": "src/assets/products_img/guava_danish.png"
@@ -11,7 +12,8 @@
         {
             "id": 2,
             "name": "Caramel Apple Pie",
-            "description": "Classic apple pie with a rich caramel topping and flaky crust.",
+            "description": "Tarta de manzana clásica con un rico topping de caramelo y corteza crujiente.",
+            "longDescription": "Tarta de manzana clásica con un rico topping de caramelo y corteza crujiente. Un postre perfecto que combina la acidez de la manzana con la dulzura del caramelo.",
             "price": 4.0,
             "category": "bolleria",
             "image": "src/assets/products_img/caramel_apple_pie.png"
@@ -19,7 +21,8 @@
         {
             "id": 3,
             "name": "Almond Croissant",
-            "description": "Buttery and flaky croissant filled with sweet almond cream.",
+            "description": "Croissant mantecoso y hojaldrado relleno con crema dulce de almendra.",
+            "longDescription": "Este croissant, mantecoso y hojaldrado, está relleno de una rica crema dulce de almendra, creando una combinación perfecta de texturas y sabores.",
             "price": 3.5,
             "category": "bolleria",
             "image": "src/assets/products_img/almond_croissant.png"
@@ -27,274 +30,155 @@
         {
             "id": 4,
             "name": "Fruit Pastry",
-            "description": "Colorful pastry topped with fresh seasonal fruits and light cream.",
+            "description": "Pastel colorido cubierto con frutas frescas de temporada y crema ligera.",
+            "longDescription": "Este pastel de frutas es una opción refrescante, con frutas frescas de temporada y una capa ligera de crema que combina perfectamente con la base hojaldrada.",
             "price": 5.0,
             "category": "bolleria",
             "image": "src/assets/products_img/fruit_pastry.png"
         },
         {
             "id": 5,
-            "name": "Pain Au Chocolat",
-            "description": "Traditional French pastry made of a flaky, buttery dough with layers of dark chocolate.",
-            "price": 3.0,
-            "category": "bolleria",
-            "image": "src/assets/products_img/pain_au_chocolat.png"
-        },
-        {
-            "id": 6,
             "name": "Strawberry Croissant",
-            "description": "Flaky croissant filled with fresh strawberries and a delicate cream.",
+            "description": "Croissant crujiente relleno con fresas frescas y una delicada crema.",
+            "longDescription": "Este croissant, con su suave masa y relleno de fresas frescas, es una opción perfecta para los amantes de los postres frutales.",
             "price": 4.0,
             "category": "bolleria",
             "image": "src/assets/products_img/strawberry_croissant.png"
         },
         {
-            "id": 7,
-            "name": "Croissant",
-            "description": "Classic buttery and flaky croissant, perfect for breakfast or a snack.",
-            "price": 2.5,
-            "category": "bolleria",
-            "image": "src/assets/products_img/croissant.png"
-        },
-        {
-            "id": 8,
-            "name": "Yuzu Pie",
-            "description": "Citrusy and refreshing pie with a yuzu custard filling.",
-            "price": 4.5,
-            "category": "bolleria",
-            "image": "src/assets/products_img/yuzu_pie.png"
-        },
-        {
-            "id": 9,
-            "name": "Chocolate Croissant",
-            "description": "Delicious croissant with rich chocolate filling and dusting of cocoa powder.",
-            "price": 3.5,
-            "category": "bolleria",
-            "image": "src/assets/products_img/chocolate_croissant.png"
-        },
-        {
-            "id": 10,
-            "name": "Spinach Feta Danish",
-            "description": "Savory danish filled with spinach and feta cheese, a flavorful option.",
-            "price": 4.0,
-            "category": "bolleria",
-            "image": "src/assets/products_img/spinach_feta_danish.png"
-        },
-        {
-            "id": 11,
-            "name": "Baguette",
-            "description": "Classic long and thin French bread with a crisp crust.",
+            "id": 6,
+            "name": "Purple Sweet Potato Loaf",
+            "description": "Todo natural, suave y esponjoso, lleno de sabor y sutiles notas dulces.",
+            "longDescription": "Este pan de batata morada es completamente natural, con una textura suave y un sabor sutilmente dulce que lo hace único.",
             "price": 3.0,
             "category": "panaderia",
-            "image": "src/assets/products_img/baguette.png"
+            "image": "src/assets/products_img/purple_sweet_potato_loaf.png"
         },
         {
-            "id": 12,
-            "name": "Chocolate Dipped Belgium Waffle",
-            "description": "Sweet Belgium waffle dipped in rich chocolate.",
+            "id": 7,
+            "name": "Taro Cream Bread",
+            "description": "Pan suave con aroma a taro y crema.",
+            "longDescription": "Este pan es ligero y suave, con un aroma sutil a taro y relleno con una rica crema que le da un sabor delicioso.",
             "price": 4.5,
             "category": "panaderia",
             "image": "src/assets/products_img/chocolate_dipped_belgium_waffle.png"
         },
         {
-            "id": 13,
+            "id": 8,
             "name": "Salt & Butter Roll",
-            "description": "Simple roll with a touch of salt and rich butter flavor.",
+            "description": "Rollo simple con un toque de sal y un rico sabor a mantequilla.",
+            "longDescription": "Este rollo tiene una combinación perfecta entre el toque salado y el sabor suave de la mantequilla, ofreciendo un bocado delicioso y reconfortante.",
             "price": 2.8,
             "category": "panaderia",
             "image": "src/assets/products_img/salt_butter_roll.png"
         },
         {
-            "id": 14,
+            "id": 9,
             "name": "Buttercream Bread",
-            "description": "Soft bread filled with sweet buttercream.",
+            "description": "Pan suave relleno con crema de mantequilla dulce.",
+            "longDescription": "Este pan es la combinación perfecta de suavidad y dulzura, con una rica crema de mantequilla que se derrite en cada bocado.",
             "price": 3.5,
             "category": "panaderia",
             "image": "src/assets/products_img/buttercream_bread.png"
         },
         {
-            "id": 15,
+            "id": 10,
             "name": "Blueberry Cream Cheese Bread",
-            "description": "Bread with blueberries and cream cheese filling.",
+            "description": "Pan con arándanos y relleno de queso crema.",
+            "longDescription": "Este pan tiene un delicioso sabor de arándanos frescos combinados con el suave y cremoso queso crema, creando una combinación exquisita.",
             "price": 4.0,
             "category": "panaderia",
             "image": "src/assets/products_img/blueberry_cream_cheese_bread.png"
         },
         {
-            "id": 16,
-            "name": "Raisin Bread",
-            "description": "Sweet bread with juicy raisins throughout.",
-            "price": 3.2,
-            "category": "panaderia",
-            "image": "src/assets/products_img/raisin_bread.png"
-        },
-        {
-            "id": 17,
-            "name": "Multi-Grain Pan Bread",
-            "description": "Healthy and hearty multi-grain bread loaf.",
-            "price": 4.8,
-            "category": "panaderia",
-            "image": "src/assets/products_img/multi_grain_pan_bread.png"
-        },
-        {
-            "id": 18,
-            "name": "Sweet Frank Roll",
-            "description": "Sweet and soft roll, perfect for a snack.",
-            "price": 2.5,
-            "category": "panaderia",
-            "image": "src/assets/products_img/sweet_frank_roll.png"
-        },
-        {
-            "id": 19,
-            "name": "Croque Monsieur",
-            "description": "Classic French ham and cheese sandwich, baked until golden.",
-            "price": 5.5,
-            "category": "panaderia",
-            "image": "src/assets/products_img/croque_monsieur.png"
-        },
-        {
-            "id": 20,
-            "name": "Soboro Bread",
-            "description": "Sweet bread with a crumbly peanut butter topping.",
-            "price": 3.0,
-            "category": "panaderia",
-            "image": "src/assets/products_img/soboro_bread.png"
-        },
-        {
-            "id": 21,
+            "id": 11,
             "name": "Earl Grey Cloud",
-            "description": "Light and airy cake infused with Earl Grey tea flavor.",
+            "description": "Pastel ligero y aireado con sabor a té Earl Grey.",
+            "longDescription": "Este pastel es delicado y esponjoso, infusionado con el suave y aromático sabor del té Earl Grey, creando una experiencia única.",
             "price": 6.0,
             "category": "pasteleria",
             "image": "src/assets/products_img/earl_grey_cloud.png"
         },
         {
-            "id": 22,
+            "id": 12,
             "name": "Blueberry Yogurt #3",
-            "description": "Yogurt cake with fresh blueberries, light and refreshing.",
+            "description": "Pastel de yogurt con arándanos frescos, ligero y refrescante.",
+            "longDescription": "Este pastel de yogurt es ligero y refrescante, con la combinación perfecta de frescura de los arándanos y la suavidad del yogurt.",
             "price": 6.5,
             "category": "pasteleria",
             "image": "src/assets/products_img/blueberry_yogurt_3.png"
         },
         {
-            "id": 23,
+            "id": 13,
             "name": "Blueberry Yogurt #2",
-            "description": "Another variation of blueberry yogurt cake, creamy and delicious.",
+            "description": "Otra variación del pastel de yogurt con arándanos, cremoso y delicioso.",
+            "longDescription": "Este pastel de yogurt con arándanos es cremoso y delicioso, con un sabor más intenso a frutas y una textura suave.",
             "price": 6.5,
             "category": "pasteleria",
             "image": "src/assets/products_img/blueberry_yogurt_2.png"
         },
         {
-            "id": 24,
+            "id": 14,
             "name": "Strawberry Lychee",
-            "description": "Cake combining sweet strawberries and exotic lychee fruit.",
+            "description": "Pastel que combina frescas fresas y la exótica fruta de lichí.",
+            "longDescription": "Este pastel presenta una mezcla perfecta de fresas dulces y la refrescante y exótica fruta de lichí, creando una experiencia de sabor única.",
             "price": 7.0,
             "category": "pasteleria",
             "image": "src/assets/products_img/strawberry_lychee.png"
         },
         {
-            "id": 25,
+            "id": 15,
             "name": "Strawberry Gateau",
-            "description": "Elegant gateau cake with layers of strawberry and cream.",
+            "description": "Elegante pastel gateau con capas de fresa y crema.",
+            "longDescription": "Este pastel gateau es una opción elegante y deliciosa, con capas de fresas frescas y suave crema que se combinan de manera perfecta.",
             "price": 7.5,
             "category": "pasteleria",
             "image": "src/assets/products_img/strawberry_gateau.png"
         },
         {
-            "id": 26,
-            "name": "Cloud Cake #3",
-            "description": "Light and fluffy cloud cake, a melt-in-your-mouth experience.",
-            "price": 5.5,
-            "category": "pasteleria",
-            "image": "src/assets/products_img/cloud_cake_3.png"
-        },
-        {
-            "id": 27,
-            "name": "Cloud Cake #2",
-            "description": "Another delightful cloud cake variation, soft and airy.",
-            "price": 5.5,
-            "category": "pasteleria",
-            "image": "src/assets/products_img/cloud_cake_2.png"
-        },
-        {
-            "id": 28,
-            "name": "Strawberry Cloud Cake",
-            "description": "Cloud cake infused with sweet strawberry flavor.",
-            "price": 6.0,
-            "category": "pasteleria",
-            "image": "src/assets/products_img/strawberry_cloud_cake.png"
-        },
-        {
-            "id": 29,
-            "name": "Green Tea Cloud Cake",
-            "description": "Cloud cake with a delicate green tea flavor.",
-            "price": 6.0,
-            "category": "pasteleria",
-            "image": "src/assets/products_img/green_tea_cloud_cake.png"
-        },
-        {
-            "id": 30,
-            "name": "Peach Cream Cake",
-            "description": "Creamy cake with sweet peach pieces.",
-            "price": 7.0,
-            "category": "pasteleria",
-            "image": "src/assets/products_img/peach_cream_cake.png"
-        },
-        {
-            "id": 31,
+            "id": 16,
             "name": "Egg & Cheese Morning Bun",
-            "description": "Fluffy morning bun filled with egg and melted cheese.",
+            "description": "Bollo esponjoso de la mañana relleno con huevo y queso derretido.",
+            "longDescription": "Este bollo esponjoso y sabroso está relleno con huevo y queso derretido, creando una opción perfecta para el desayuno.",
             "price": 4.5,
             "category": "sandwiches",
             "image": "src/assets/products_img/egg_cheese_morning_bun.png"
         },
         {
-            "id": 32,
+            "id": 17,
             "name": "Egg & Bacon Cheese Croissant Sandwich",
-            "description": "Croissant sandwich with egg, crispy bacon, and melted cheese.",
+            "description": "Sándwich de croissant con huevo, bacon crujiente y queso derretido.",
+            "longDescription": "Este sándwich de croissant es una combinación deliciosa de huevo, bacon crujiente y queso derretido, perfecto para un desayuno o almuerzo.",
             "price": 5.5,
             "category": "sandwiches",
             "image": "src/assets/products_img/egg_bacon_cheese_croissant_sandwich.png"
         },
         {
-            "id": 33,
+            "id": 18,
             "name": "Jalapeño Ham & Cheese Croissant Sandwich",
-            "description": "Croissant sandwich with ham, cheese, and a spicy jalapeño kick.",
+            "description": "Sándwich de croissant con jamón, queso y un toque picante de jalapeño.",
+            "longDescription": "Este sándwich de croissant tiene un sabor equilibrado, con jamón, queso y un toque picante de jalapeño para un sabor único.",
             "price": 6.0,
             "category": "sandwiches",
             "image": "src/assets/products_img/jalapeno_ham_cheese_croissant_sandwich.png"
         },
         {
-            "id": 34,
+            "id": 19,
             "name": "Turkey & Cheese Croissant",
-            "description": "Classic croissant sandwich with turkey and cheese.",
+            "description": "Sándwich clásico de croissant con pavo y queso.",
+            "longDescription": "Este sándwich de croissant es clásico y delicioso, con pavo y queso derretido en una combinación perfecta.",
             "price": 5.0,
             "category": "sandwiches",
             "image": "src/assets/products_img/turkey_cheese_croissant.png"
         },
         {
-            "id": 35,
+            "id": 20,
             "name": "Tuna Salad Sandwich",
-            "description": "Fresh tuna salad sandwich on your choice of bread.",
+            "description": "Sándwich de ensalada de atún fresco en el pan de tu elección.",
+            "longDescription": "Este sándwich está relleno con una fresca ensalada de atún, una opción deliciosa y saludable para cualquier momento del día.",
             "price": 5.8,
             "category": "sandwiches",
             "image": "src/assets/products_img/tuna_salad_sandwich.png"
-        },
-        {
-            "id": 36,
-            "name": "Chicken Club Sandwich",
-            "description": "Stacked club sandwich with chicken, bacon, lettuce, and tomato.",
-            "price": 7.0,
-            "category": "sandwiches",
-            "image": "src/assets/products_img/chicken_club_sandwich.png"
-        },
-        {
-            "id": 37,
-            "name": "Caprese Sandwich",
-            "description": "Vegetarian sandwich with fresh mozzarella, tomato, and basil.",
-            "price": 6.5,
-            "category": "sandwiches",
-            "image": "src/assets/products_img/caprese_sandwich.png"
         }
     ]
 }

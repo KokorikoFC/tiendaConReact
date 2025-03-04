@@ -66,7 +66,7 @@ function Template() {
                         </div>
                     </div>
                     <div className="description-container">
-                        <p>{product.description}</p>
+                        <p>{product.longDescription}</p>
                     </div>
                     <div className="category-container">
                         <p>Categoría: </p>
