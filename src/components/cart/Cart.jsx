@@ -87,9 +87,12 @@ export function Cart() {
                                 
                                 ))
                             )}
-                        <button className="buy-btn" onClick={clearCart}>Comprar</button>
                             
                         </ul>
+                            <div className="cart-btn-cont">
+                            <button className="buy-btn" onClick={clearCart}>Comprar</button>
+
+                            </div>
                     </aside>
                 </>
             )}

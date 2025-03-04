@@ -79,7 +79,7 @@ function Home() {
                         />
                         <div className="about-img">
                             <img
-                                src="src/assets/img/649249d29a20bd6bc3deade5_Green_Tea_Cloud_Cake.png"
+                                src="src/assets/img/strawberry_cake.png"
                                 alt=""
                             />
                         </div>

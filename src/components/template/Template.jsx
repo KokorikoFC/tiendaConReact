@@ -11,12 +11,13 @@ import { TiPlus } from "react-icons/ti";
 import { TiMinus } from "react-icons/ti";
 
 function Template() {
-    const { addToCart } = useCart();
+    const { addProductToCartWithQuantity } = useCart();
 
     const { state } = useLocation();
     const product = state?.product;
 
-    const [quantity, setQuantity] = useState(2);
+    // Cambié el valor inicial de quantity a 1
+    const [quantity, setQuantity] = useState(1);
 
     const incrementQuantity = () => {
         setQuantity(quantity + 1);
@@ -46,6 +47,7 @@ function Template() {
                 return <PiBreadDuotone className="categoryIcon" />;
         }
     };
+
     return (
         <main>
             <Header />
@@ -89,7 +91,7 @@ function Template() {
                         </div>
                         <button
                             className="add-to-cart-button"
-                            onClick={() => addToCart(product)}
+                            onClick={() => addProductToCartWithQuantity(product, quantity)} // Pasar quantity al carrito
                         >
                             AÑADIR AL CARRITO
                         </button>

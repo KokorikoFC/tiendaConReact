@@ -13,7 +13,7 @@ function Footer() {
       <div className="content">
         <div className="footer-content">
           <div className="footer-logo">
-            <img src="src/assets/img/logo-Photoroom.png" alt="" />
+            <img src="src/assets/img/logo-black.png" alt="" />
             <p>小猫咪 - Cake</p>
           </div>
           <div className="footer-section">

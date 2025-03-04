@@ -31,6 +31,21 @@ export const CartProvider = ({ children }) => {
         setCart((prevState) => [...prevState, { ...product, quantity: 1 }]);
     };
 
+    //-----------AGREGAR UN PRODUCTO CON CANTIDAD DEFINIDA AL CARRITO-----------
+const addProductToCartWithQuantity = (product, quantity) => {
+    const productInCartId = cart.findIndex(
+        (item) => item.id === product.id
+    );
+
+    if (productInCartId >= 0) {
+        const newCart = structuredClone(cart);
+        newCart[productInCartId].quantity += quantity; // Sumar la cantidad proporcionada
+        setCart(newCart);
+    } else {
+        setCart((prevState) => [...prevState, { ...product, quantity }]); // Usar la cantidad proporcionada
+    }
+};
+
     //-----------ELIMINAR UNO DEL CARRITO-----------
     const removeOneFromCart = (product) => {
         const productInCartId = cart.findIndex(
@@ -57,7 +72,7 @@ export const CartProvider = ({ children }) => {
 
     return (
         <CartContext.Provider
-            value={{ cart, addToCart, clearCart, removeOneFromCart }}
+            value={{ cart, addToCart, clearCart, removeOneFromCart,addProductToCartWithQuantity }}
         >
             {children}
         </CartContext.Provider>

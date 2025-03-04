@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
-import './Header.css';
+import { useState, useEffect } from "react";
+import "./Header.css";
 import Cart from "../cart/Cart";
-import { FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
 
 function Header() {
     const navigate = useNavigate();
@@ -19,27 +18,31 @@ function Header() {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
     return (
-        <header className="header" style={{ backgroundColor: `rgba(202, 209, 163, ${headerOpacity})` }}>
-            
-                <div className="header-logo " onClick={() => navigate("/home")}>
-                    <img src="src/assets/img/logo-Photoroom.png" alt="" />
-                </div>
+        <header
+            className="header"
+            style={{ backgroundColor: `rgba(202, 209, 163, ${headerOpacity})` }}
+        >
+            <div className="header-logo " onClick={() => navigate("/home")}>
+                <img src="src/assets/img/logo-black.png" alt="" />
+            </div>
 
-           
             <div className="header-icons-container">
                 <div className="header-cart-icon">
                     <Cart className="header-cart-icon-svg" />
                 </div>
                 <div className="header-profile-icon">
-                    <FaUserCircle className="header-profile-icon-svg" onClick={() => navigate("/login")} />
+                    <FaUserCircle
+                        className="header-profile-icon-svg"
+                        onClick={() => navigate("/login")}
+                    />
                 </div>
             </div>
         </header>
