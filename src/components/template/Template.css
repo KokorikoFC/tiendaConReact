@@ -1,21 +1,25 @@
+
+
 .template-container {
-    height: calc(100vh - 60px);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
+    padding: 20px 50px;
+    background-color: var(--beige);
+    color: var(--grey);
 }
 
 .info-container {
     width: 50%;
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 30px;
+    margin-top: 50px;
 }
 
 .title-container {
@@ -29,19 +33,22 @@
 
 .decoration {
     width: 100px;
-    height: 8px;
-    background-color: #f7415b;
+    height: 6px;
+    background-color: var(--rojo);
+    border-radius: 5px;
+
 }
 
 .title {
-    width: 100%;
-    color: #333;
+    width: 100%
+
 }
 
 .title h1 {
-    font-size: 2.5em;
+    font-size: 46px;
     font-weight: bold;
-    margin: 0;
+    text-align: left;
+    margin: 20px 0;
 }
 
 .price-container {
@@ -53,49 +60,43 @@
 }
 
 .stars {
-    color: #ffc107;
+    color: #fad76d;
     font-size: 1.2em;
 }
 
 .price {
-    color: #f7415b;
     font-size: 1.8em;
     font-weight: bold;
+    color: var(--rojo);
 }
 
 .description-container {
     width: 100%;
-    color: #555;
-    margin-bottom: 20px;
+    height: 35%;
 }
 
 .description-container p {
     text-align: justify;
     line-height: 1.6;
-    font-size: 1em;
-    overflow: hidden; /* Hide text that overflows the container */
-    display: -webkit-box; /* Enable line clamping */
-    -webkit-line-clamp: 5; /* Limit text to 3 lines (adjust as needed) */
-    -webkit-box-orient: vertical; /* Set vertical orientation for line clamping */
-    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    font-size: 20px;
+    overflow: hidden; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical; 
+    text-overflow: ellipsis; 
+    font-weight: 600;
 }
 
 .category-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-block: 10px;
-    margin-bottom: 30px;
+    justify-content: start;
+    align-items: center;
     gap: 20px;
 }
 
 .category-container p {
-    width: 100%;
     font-weight: bold;
-    color: #333;
     font-size: 20px;
 }
 
@@ -125,7 +126,6 @@
 
 .category-item p {
     font-size: 0.9em;
-    color: #777;
     margin: 0;
     text-align: center;
 }
@@ -138,50 +138,50 @@
     align-items: center;
     padding: 10px 0;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .quantity-container {
+    font-weight: 700;
+    font-size: 1.2em;
+    width: 150px;
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
+    justify-content: space-between;
     border-radius: 5px;
     overflow: hidden;
+    background-color: var(--verde);
 }
 
 .quantity-button {
-    background-color: #fff;
     border: none;
-    padding: 10px 17px;
     cursor: pointer;
-    font-size: 1em;
-    color: #555;
+    font-size: 24px;
+    color: var(--grey);
     transition: background-color 0.3s;
+    width: 50px;
 }
 
 .quantity-button:hover {
-    background-color: #eee;
+    color: var(--blanco);
+    transition: all 0.2s;
 }
 
-.quantity-button:first-child {
-    border-right: 1px solid #ddd;
-}
 
-.quantity-button:last-child {
-    border-left: 1px solid #ddd;
-}
 
 .quantity-container span {
     padding: 10px 17px;
     font-size: 1em;
-    color: #333;
-    min-width: 30px;
+    width: 40%;
     text-align: center;
     display: inline-block;
-    background-color: #fff;
+    background-color: var(--blanco);
+    border-right: 1px solid var(--blanco);
+    border-left: 1px solid var(--blanco);
 }
 
 .add-to-cart-button {
-    background-color: #f7415b;
+    background-color: var(--rojo);
     color: white;
     border: none;
     border-radius: 5px;
@@ -193,19 +193,25 @@
     align-items: center;
     gap: 5px;
 }
+.add-to-cart-button:hover {
+    background-color: var(--verde);
+    transition: all 0.2s;
+}
 
 .img-container {
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    padding-right: 30px;
 }
 
 .circle {
-    background-color: #ebb9c3;
+    background-color: var(--verde);
     width: 500px;
-    height: 500px;
+    aspect-ratio: 1/1;
+
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -215,7 +221,7 @@
 }
 
 .circle img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
     object-fit: contain;

@@ -1,6 +1,8 @@
 import "./Product.css";
 import { PiBreadDuotone } from "react-icons/pi";
 import { LuCakeSlice } from "react-icons/lu";
+import { LuSandwich } from "react-icons/lu";
+import { LuCroissant } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 
 function Product({ products }) {
@@ -16,6 +18,10 @@ function Product({ products }) {
                 return <PiBreadDuotone className="categoryIcon" />;
             case "pasteleria":
                 return <LuCakeSlice className="categoryIcon" />;
+                case "sandwiches":
+                return <LuSandwich className="categoryIcon" />;
+            case "bolleria":
+                return <LuCroissant className="categoryIcon" />;
             default:
                 return <PiBreadDuotone className="categoryIcon" />;
         }

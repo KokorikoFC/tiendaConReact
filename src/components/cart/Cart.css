@@ -120,9 +120,16 @@ aside hr {
 
 .quantity-controls p {
     font-size: 18px;
+    height: 100%;
     width: 35%;
     font-weight: 700;
     text-align: center;
+    border-right: 1px solid var(--blanco);
+    border-left: 1px solid var(--blanco);
+    background-color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .quantity-controls-price {
     font-size: 20px;
