@@ -115,7 +115,7 @@
             "longDescription": "Este pastel de yogurt con mango ofrece una mezcla de suavidad y cremosidad, con el sabor vibrante y tropical del mango que realza su textura suave. Es una opción refrescante y deliciosa para los amantes de los postres frutales, con un toque sutil de frescura y dulzura natural.",
             "price": 6.5,
             "category": "pasteleria",
-            "image": "src/assets/products_img/mango_yogurt_cloud.png"
+            "image": "src/assets/products_img/mango_cloud.png"
         },
         {
             "id": 14,
