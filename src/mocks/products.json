@@ -61,7 +61,7 @@
             "longDescription": "Este pan es ligero y suave, con un aroma sutil a taro y relleno con una rica crema que le da un sabor delicioso.",
             "price": 4.5,
             "category": "panaderia",
-            "image": "src/assets/products_img/chocolate_dipped_belgium_waffle.png"
+            "image": "src/assets/products_img/taro_cream_bread.png"
         },
         {
             "id": 8,
@@ -70,7 +70,7 @@
             "longDescription": "Este delicioso rollo está hecho con una masa suave de pan enriquecida con ingredientes como mantequilla, crema espesa y leche, lo que le da una textura perfecta. Dentro, encontrarás una sabrosa salchicha de res acompañada de queso mozzarella rallado, creando una combinación irresistible. La cobertura de huevo y las hojuelas de perejil le aportan un toque final de frescura y sabor. Es el snack ideal para cualquier momento del día.",
             "price": 2.8,
             "category": "panaderia",
-            "image": "src/assets/products_img/salt_butter_roll.png"
+            "image": "src/assets/products_img/sweet_frank_roll.png"
         },
         {
             "id": 9,
