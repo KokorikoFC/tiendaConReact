@@ -65,9 +65,9 @@
         },
         {
             "id": 8,
-            "name": "Salt & Butter Roll",
-            "description": "Rollo simple con un toque de sal y un rico sabor a mantequilla.",
-            "longDescription": "Este rollo tiene una combinación perfecta entre el toque salado y el sabor suave de la mantequilla, ofreciendo un bocado delicioso y reconfortante.",
+            "name": "Sweet Frank Roll",
+            "description": "Rollo suave y esponjoso con un toque salado de salchicha de res y queso mozzarella.",
+            "longDescription": "Este delicioso rollo está hecho con una masa suave de pan enriquecida con ingredientes como mantequilla, crema espesa y leche, lo que le da una textura perfecta. Dentro, encontrarás una sabrosa salchicha de res acompañada de queso mozzarella rallado, creando una combinación irresistible. La cobertura de huevo y las hojuelas de perejil le aportan un toque final de frescura y sabor. Es el snack ideal para cualquier momento del día.",
             "price": 2.8,
             "category": "panaderia",
             "image": "src/assets/products_img/salt_butter_roll.png"
@@ -101,7 +101,7 @@
         },
         {
             "id": 12,
-            "name": "Blueberry Yogurt #3",
+            "name": "Blueberry Yogurt ",
             "description": "Pastel de yogurt con arándanos frescos, ligero y refrescante.",
             "longDescription": "Este pastel de yogurt es ligero y refrescante, con la combinación perfecta de frescura de los arándanos y la suavidad del yogurt.",
             "price": 6.5,
@@ -110,12 +110,12 @@
         },
         {
             "id": 13,
-            "name": "Blueberry Yogurt #2",
-            "description": "Otra variación del pastel de yogurt con arándanos, cremoso y delicioso.",
-            "longDescription": "Este pastel de yogurt con arándanos es cremoso y delicioso, con un sabor más intenso a frutas y una textura suave.",
+            "name": "Mango Cloud",
+            "description": "Pastel cremoso de yogurt con un sabor fresco y exótico de mango.",
+            "longDescription": "Este pastel de yogurt con mango ofrece una mezcla de suavidad y cremosidad, con el sabor vibrante y tropical del mango que realza su textura suave. Es una opción refrescante y deliciosa para los amantes de los postres frutales, con un toque sutil de frescura y dulzura natural.",
             "price": 6.5,
             "category": "pasteleria",
-            "image": "src/assets/products_img/blueberry_yogurt_2.png"
+            "image": "src/assets/products_img/mango_yogurt_cloud.png"
         },
         {
             "id": 14,
