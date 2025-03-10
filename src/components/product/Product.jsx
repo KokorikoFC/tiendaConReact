@@ -3,10 +3,15 @@ import { PiBreadDuotone } from "react-icons/pi";
 import { LuCakeSlice } from "react-icons/lu";
 import { LuSandwich } from "react-icons/lu";
 import { LuCroissant } from "react-icons/lu";
+import { FaShoppingBasket } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../hooks/useCart.jsx";
+
 
 function Product({ products }) {
     const navigate = useNavigate();
+        const { addToCart } = useCart();
+    
 
     const handleProductClick = (product) => {
         navigate("/template", { state: { product } }); // Pasa los datos del producto por state
@@ -33,11 +38,11 @@ function Product({ products }) {
                 {products.map((product) => (
                     <li
                         key={product.id}
-                        onClick={() => handleProductClick(product)}
+                        
                     >
                         <div className="productCard">
                             <div className="productImg_cont">
-                                <img src={product.image} alt={product.name} />
+                                <img src={product.image} alt={product.name} onClick={() => handleProductClick(product)}/>
                             </div>
                             <div className="productCard_infoWrapper">
                                 <div className="productCard_infoCont">
@@ -45,11 +50,16 @@ function Product({ products }) {
                                     <hr />
                                     <p>{product.description}</p>
                                     <div className="price_category_cont">
+                                        
+                                        <div className="productCategory">
+                                            {getCategoryIcon(product.category)}
+                                        </div>
+                                        <div className="price_addToCart_cont">
+                                        <FaShoppingBasket onClick={() => addToCart(product)} className="price_cart"/>
+
                                         <p className="productPrice">
                                             {product.price} €
                                         </p>
-                                        <div className="productCategory">
-                                            {getCategoryIcon(product.category)}
                                         </div>
                                     </div>
                                 </div>

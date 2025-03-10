@@ -67,13 +67,11 @@ aside hr {
 }
 
 .cart-items-list {
-    height: 75%;
+    height: 77%;
+    width: 100%;
     overflow-y: scroll;
     scrollbar-width: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+
 }
 .cart-item {
     width: 90%;
@@ -152,7 +150,7 @@ aside hr {
 .buy-btn {
     width: 100%;
     height: 55px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 10px;
     background-color: var(--rojo);
     color: var(--blanco);

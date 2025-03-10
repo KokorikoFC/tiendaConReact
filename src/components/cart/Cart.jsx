@@ -5,7 +5,6 @@ import { useCart } from "../../hooks/useCart.jsx";
 import { TiPlus } from "react-icons/ti";
 import { TiMinus } from "react-icons/ti";
 
-
 function CartItem({ name, price, image, quantity, product }) {
     const { addToCart, removeOneFromCart } = useCart();
 
@@ -19,12 +18,19 @@ function CartItem({ name, price, image, quantity, product }) {
             </div>
             <div className="cart-item-controls">
                 <div className="quantity-controls">
-                    <TiMinus className="quantity-btn" onClick={() => removeOneFromCart(product)} />
+                    <TiMinus
+                        className="quantity-btn"
+                        onClick={() => removeOneFromCart(product)}
+                    />
                     <p>{quantity}</p>
-                    <TiPlus className="quantity-btn" onClick={() => addToCart(product)} />
+                    <TiPlus
+                        className="quantity-btn"
+                        onClick={() => addToCart(product)}
+                    />
                 </div>
-                <p className="quantity-controls-price">{(price * quantity).toFixed(2)} €</p>
-
+                <p className="quantity-controls-price">
+                    {(price * quantity).toFixed(2)} €
+                </p>
             </div>
         </li>
     );
@@ -55,7 +61,7 @@ export function Cart() {
 
     return (
         <>
-            <div 
+            <div
                 className="cartBtn"
                 onClick={toggleCart}
                 aria-label="Abrir carrito"
@@ -71,28 +77,26 @@ export function Cart() {
                     ></div>
 
                     <aside className={`cart ${isOpen ? "open" : ""}`}>
-                    <h3>Carrito</h3>
-                    <hr />
+                        <h3>Carrito</h3>
+                        <hr />
                         <ul className="cart-items-list">
                             {cart.length === 0 ? (
                                 <p>El carrito está vacío</p>
                             ) : (
-                                
                                 cart.map((product) => (
                                     <CartItem
                                         key={product.id}
                                         product={product}
                                         {...product}
                                     />
-                                
                                 ))
                             )}
-                            
                         </ul>
-                            <div className="cart-btn-cont">
-                            <button className="buy-btn" onClick={clearCart}>Comprar</button>
-
-                            </div>
+                        <div className="cart-btn-cont">
+                            <button className="buy-btn" onClick={clearCart}>
+                                Comprar
+                            </button>
+                        </div>
                     </aside>
                 </>
             )}
