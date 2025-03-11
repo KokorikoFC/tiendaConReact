@@ -52,7 +52,11 @@ export function Cart() {
 
     return (
         <>
-            <div className="cartBtn" onClick={toggleCart} aria-label="Abrir carrito">
+            <div
+                className="cartBtn"
+                onClick={toggleCart}
+                aria-label="Abrir carrito"
+            >
                 <FaShoppingBasket className="cart-icon" />
             </div>
 
@@ -66,19 +70,26 @@ export function Cart() {
                     <aside className={`cart ${isCartOpen ? "open" : ""}`}>
                         <h3>Carrito</h3>
                         <hr />
-                        <ul className="cart-items-list">
-                            {cart.length === 0 ? (
-                                <p>El carrito está vacío</p>
-                            ) : (
-                                cart.map((product) => (
-                                    <CartItem
-                                        key={product.id}
-                                        product={product}
-                                        {...product}
-                                    />
-                                ))
-                            )}
-                        </ul>
+                        <div className="cart-list-cont">
+                            <ul className="cart-items-list">
+                                {cart.length === 0 ? (
+                                    <p>El carrito está vacío</p>
+                                ) : (
+                                    cart.map((product) => (
+                                        <li
+                                            key={product.id}
+                                            className="cart-item"
+                                        >
+                                            <CartItem
+                                                product={product}
+                                                {...product}
+                                            />
+                                        </li>
+                                    ))
+                                )}
+                            </ul>
+                        </div>
+
                         <div className="cart-btn-cont">
                             <button className="buy-btn" onClick={clearCart}>
                                 Comprar
