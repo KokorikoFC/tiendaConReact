@@ -1,9 +1,9 @@
 import "./Home.css";
-import Header from "../header/Header";
-import Product from "../product/Product";
-import Filters from "../filters/Filters";
-import Footer from "../footer/Footer";
-import { products } from "./../../mocks/products.json";
+import Header from "../../components/header/Header";
+import Product from "../../components/product/Product";
+import Filters from "../../components/filters/Filters";
+import Footer from "../../components/footer/Footer";
+import { products } from "../../mocks/products.json";
 import { useFilter } from "../../hooks/useFilters";
 import { CartProvider } from "../../context/cartContext";
 import { useNavigate } from "react-router-dom";

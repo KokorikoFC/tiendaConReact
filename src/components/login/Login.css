@@ -49,6 +49,7 @@ main {
     color: var(--grey);
     width: 100%;
     text-align: center;
+    font-weight: 600;
 }
 
 .decoration-image {
@@ -71,11 +72,13 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: stretch;
     height: 100%;
 }
+.login-form{
+    gap: 50px;
 
+}
 .title {
     text-align: center;
     font-size: 1.3em;
@@ -83,10 +86,13 @@ main {
     margin-bottom: 0;
 }
 
+.title h1{
+    text-align: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    gap: 0px;
     width: 100%;
 }
 
@@ -128,7 +134,7 @@ main {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .login-button:hover {
@@ -140,6 +146,7 @@ main {
     font-size: 0.9em;
     margin-top: 20px;
     color: var(--grey);
+    font-weight: 600;
 }
 
 .register-link span {

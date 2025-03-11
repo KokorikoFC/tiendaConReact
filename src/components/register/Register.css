@@ -53,9 +53,10 @@ main {
     border-radius: 20px;
     position: relative;
     top: 18%;
-    left: 26%;
+    left: 22%;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    font-weight: 600;
+
 }
 
 .decoration-title2::after {
@@ -88,7 +89,7 @@ main {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     align-items: stretch;
     height: 100%;
 }
@@ -98,6 +99,9 @@ main {
     font-size: 1.3em;
     color: #333;
     margin-bottom: 0;
+}
+.title h1{
+    text-align: center;
 }
 
 .form {
@@ -135,7 +139,7 @@ main {
     outline: none;
 }
 
-.login-button {
+.register-button {
     padding: 15px 20px;
     border: none;
     border-radius: 8px;
@@ -145,7 +149,7 @@ main {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .login-button:hover {
@@ -157,6 +161,7 @@ main {
     font-size: 0.9em;
     margin-top: 20px;
     color: var(--grey);
+    font-weight: 600;
 }
 
 .register-link span {

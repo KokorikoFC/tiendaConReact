@@ -88,7 +88,7 @@ function Register({ onRegistroExitoso, onLoginClick }) {
                                     required
                                 />
                             </div>
-                            <button type="submit" className="login-button">Registrarse</button>
+                            <button type="submit" className="register-button">Registrarse</button>
                             <div className="register-link" onClick={onLoginClick}>
                                 ¿Ya tienes cuenta? <span>Inicia Sesión</span>
                             </div>

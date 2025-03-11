@@ -1,5 +1,5 @@
 import "./Template.css";
-import Header from "../header/Header";
+import Header from "../../components/header/Header.jsx";
 import { useCart } from "../../hooks/useCart.jsx";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";

@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Template from './components/template/Template';
-import Home from './components/home/Home';
-import AuthPage from './components/auth/AuthPage'; 
+import Template from './pages/template/Template';
+import Home from './pages//home/Home';
+import AuthPage from './pages/auth/AuthPage'; 
 import Cart from './components/cart/Cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

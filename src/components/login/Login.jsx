@@ -42,7 +42,7 @@ function Login({ usuariosRegistrados, onRegisterClick }) {
         <main>
             <div className="main-container">
                 <div className="login-container">
-                    <div className="form-container">
+                    <div className="form-container login-form">
                         <div className="title">
                             <h1>Iniciar Sesión</h1>
                         </div>

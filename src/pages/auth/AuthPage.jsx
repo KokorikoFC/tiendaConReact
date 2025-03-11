@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'; // Import useEffect
-import Registro from '../register/Register';
-import Login from '../login/Login';
+import Registro from '../../components/register/Register.jsx';
+import Login from '../../components/login/Login.jsx';
 
 function AuthPage() {
     // Function to get users from localStorage, or default if not found
@@ -18,7 +18,7 @@ function AuthPage() {
     // Use useEffect to save usuariosRegistrados to localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem('usuariosRegistrados', JSON.stringify(usuariosRegistrados));
-    }, [usuariosRegistrados]); // зависимость от usuariosRegistrados
+    }, [usuariosRegistrados]); 
 
     const handleRegistroExitoso = (nuevoUsuario) => {
         console.log('Nuevo usuario registrado en AuthPage:', nuevoUsuario);
