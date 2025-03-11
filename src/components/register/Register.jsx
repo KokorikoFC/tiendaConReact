@@ -52,7 +52,7 @@ function Register({ onRegistroExitoso, onLoginClick }) {
                         <img src={Gato} alt="Gato" />
                     </div>
                 </div>
-                <div className="login-container">
+                <div className="register-container">
                     <div className="form-container">
                         <div className="title">
                             <h1>Registrarse</h1>
