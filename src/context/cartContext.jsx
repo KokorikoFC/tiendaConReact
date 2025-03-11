@@ -1,10 +1,14 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+    // Estado para saber si el carrito está abierto o cerrado
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
-    //Usar localStorage para guardar el carrito
+    // Usar localStorage para guardar el carrito
     const localStorageCart = localStorage.getItem("cart");
     const [cart, setCart] = useState(
         localStorageCart ? JSON.parse(localStorageCart) : []
@@ -14,37 +18,60 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
+    // Función para abrir/cerrar el carrito
+    const toggleCart = () => {
+        setIsCartOpen(prev => !prev);
+    };
 
     //-----------AGREGAR AL CARRITO-----------
     const addToCart = (product) => {
-        const productInCartId = cart.findIndex(
-            (item) => item.id === product.id
-        );
+        const productInCartId = cart.findIndex((item) => item.id === product.id);
 
         if (productInCartId >= 0) {
             const newCart = structuredClone(cart);
             newCart[productInCartId].quantity += 1;
             setCart(newCart);
-            return setCart(newCart);
+            if (!isCartOpen) {
+                toast.success(`Se agregó otra unidad de ${product.name}`, {
+                    className: 'toast-success', 
+                    icon: false
+                });
+            }
+        } else {
+            setCart((prevState) => [...prevState, { ...product, quantity: 1 }]);
+            if (!isCartOpen) {
+                toast.success(`${product.name} añadido al carrito`, {
+                    className: 'toast-success', 
+                    icon: false
+                });
+            }
         }
-
-        setCart((prevState) => [...prevState, { ...product, quantity: 1 }]);
     };
 
     //-----------AGREGAR UN PRODUCTO CON CANTIDAD DEFINIDA AL CARRITO-----------
-const addProductToCartWithQuantity = (product, quantity) => {
-    const productInCartId = cart.findIndex(
-        (item) => item.id === product.id
-    );
+    const addProductToCartWithQuantity = (product, quantity) => {
+        const productInCartId = cart.findIndex((item) => item.id === product.id);
 
-    if (productInCartId >= 0) {
-        const newCart = structuredClone(cart);
-        newCart[productInCartId].quantity += quantity; // Sumar la cantidad proporcionada
-        setCart(newCart);
-    } else {
-        setCart((prevState) => [...prevState, { ...product, quantity }]); // Usar la cantidad proporcionada
-    }
-};
+        if (productInCartId >= 0) {
+            const newCart = structuredClone(cart);
+            newCart[productInCartId].quantity += quantity;
+            setCart(newCart);
+            if (!isCartOpen) {
+                toast.success(`Se agregaron ${quantity} unidades de ${product.name} al carrito`, {
+                    className: 'toast-success',
+                    icon: false
+                });
+            }
+        } else {
+            setCart((prevState) => [...prevState, { ...product, quantity }]);
+            if (!isCartOpen) {
+                toast.success(`${product.name} añadido al carrito (${quantity} unidades)`, {
+                    className: 'toast-success',
+                    icon: false
+                });
+            }
+        }
+    };
 
     //-----------ELIMINAR UNO DEL CARRITO-----------
     const removeOneFromCart = (product) => {
@@ -55,13 +82,18 @@ const addProductToCartWithQuantity = (product, quantity) => {
         if (productInCartId >= 0) {
             const newCart = structuredClone(cart);
             if (newCart[productInCartId].quantity > 1) {
-                // Decrease quantity if quantity is greater than 1
                 newCart[productInCartId].quantity -= 1;
+                setCart(newCart);
+                if (!isCartOpen) { // Solo mostrar el toast si el carrito está cerrado
+                    toast.warn(`Se eliminó una unidad de ${product.name}`);
+                }
             } else {
-                // Remove product from cart if quantity is 1
                 newCart.splice(productInCartId, 1);
+                setCart(newCart);
+                if (!isCartOpen) { // Solo mostrar el toast si el carrito está cerrado
+                    toast.error(`${product.name} eliminado del carrito`);
+                }
             }
-            setCart(newCart);
         }
     };
 
@@ -72,7 +104,15 @@ const addProductToCartWithQuantity = (product, quantity) => {
 
     return (
         <CartContext.Provider
-            value={{ cart, addToCart, clearCart, removeOneFromCart,addProductToCartWithQuantity }}
+            value={{
+                cart,
+                addToCart,
+                clearCart,
+                removeOneFromCart,
+                addProductToCartWithQuantity,
+                isCartOpen,
+                toggleCart, 
+            }}
         >
             {children}
         </CartContext.Provider>

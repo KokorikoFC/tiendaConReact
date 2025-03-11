@@ -5,16 +5,14 @@ import { useCart } from "../../hooks/useCart.jsx";
 import { TiPlus } from "react-icons/ti";
 import { TiMinus } from "react-icons/ti";
 
-function CartItem({ name, price, image, quantity, product }) {
+export function CartItem({ name, price, image, quantity, product }) {
     const { addToCart, removeOneFromCart } = useCart();
 
     return (
         <li className="cart-item">
             <div className="cart-item-info">
                 <img src={image} alt={name} />
-                <p>
-                    <strong>{name}</strong>
-                </p>
+                <p>{name}</p>
             </div>
             <div className="cart-item-controls">
                 <div className="quantity-controls">
@@ -37,46 +35,35 @@ function CartItem({ name, price, image, quantity, product }) {
 }
 
 export function Cart() {
-    const { cart, clearCart } = useCart();
-    const [isOpen, setIsOpen] = useState(false);
+    const { cart, clearCart, isCartOpen, toggleCart } = useCart();
 
-    const toggleCart = () => {
-        setIsOpen((prev) => !prev);
-        console.log("Carrito abierto:", !isOpen);
-    };
-
-    // Efecto para agregar o quitar la clase 'no-scroll' cuando el carrito está abierto
+    // Ocultar scroll cuando el carrito está abierto
     useEffect(() => {
-        if (isOpen) {
+        if (isCartOpen) {
             document.body.classList.add("no-scroll");
         } else {
             document.body.classList.remove("no-scroll");
         }
 
-        // Limpiar clase 'no-scroll' cuando el componente se desmonte
         return () => {
             document.body.classList.remove("no-scroll");
         };
-    }, [isOpen]);
+    }, [isCartOpen]);
 
     return (
         <>
-            <div
-                className="cartBtn"
-                onClick={toggleCart}
-                aria-label="Abrir carrito"
-            >
-                <FaShoppingBasket className="cart-icon" />{" "}
+            <div className="cartBtn" onClick={toggleCart} aria-label="Abrir carrito">
+                <FaShoppingBasket className="cart-icon" />
             </div>
 
-            {isOpen && (
+            {isCartOpen && (
                 <>
                     <div
-                        className={`overlay ${isOpen ? "show" : ""}`}
+                        className={`overlay ${isCartOpen ? "show" : ""}`}
                         onClick={toggleCart}
                     ></div>
 
-                    <aside className={`cart ${isOpen ? "open" : ""}`}>
+                    <aside className={`cart ${isCartOpen ? "open" : ""}`}>
                         <h3>Carrito</h3>
                         <hr />
                         <ul className="cart-items-list">

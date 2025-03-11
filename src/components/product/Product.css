@@ -78,17 +78,18 @@ li{
     text-align: center;
 }
 
-h4{
+.productCard_infoCont h4{
     font-size: 24px;
 }
-hr{
+.productCard_infoCont hr{
     width: 50%;
     border: 2px solid var(--rojo);
     border-radius: 20px;
     margin: 20px;
 }
-p{
+.productDescription{
     font-size: 16px;
+    font-weight: 500;
 }
 .price_category_cont{
     display: flex;

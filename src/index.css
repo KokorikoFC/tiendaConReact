@@ -15,6 +15,14 @@
     --blanco: #fefdf9;
     
 }
-
+.toast-success {
+    background-color: var(--blanco) !important; 
+    color: var(--grey) !important; 
+    font-family: "Quicksand", serif !important;
+    font-weight: 600 !important;
+}
+.Toastify__progress-bar--success {
+    background-color: var(--rojo) !important; 
+}
 
 

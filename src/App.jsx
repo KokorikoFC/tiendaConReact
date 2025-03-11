@@ -1,20 +1,33 @@
-import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Template from './components/template/Template';
-import Login from './components/login/Login';
 import Home from './components/home/Home';
-import AuthPage  from './components/auth/AuthPage'; 
+import AuthPage from './components/auth/AuthPage'; 
 import Cart from './components/cart/Cart';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <Routes> {/* Define el contenedor de rutas */}
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<AuthPage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/template" element={<Template />} />
-        <Route path="/cart" element={<Cart/>} />
-      </Routes>
+    <>
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={3000} 
+        hideProgressBar={false} 
+        closeOnClick 
+        pauseOnHover 
+        draggable 
+      />
+
+        <Routes> 
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/template" element={<Template />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+    </>
   );
 }
-export default App
+
+export default App;

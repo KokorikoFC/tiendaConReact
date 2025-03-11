@@ -48,7 +48,7 @@ function Product({ products }) {
                                 <div className="productCard_infoCont">
                                     <h4>{product.name}</h4>
                                     <hr />
-                                    <p>{product.description}</p>
+                                    <p className="productDescription">{product.description}</p>
                                     <div className="price_category_cont">
                                         
                                         <div className="productCategory">
