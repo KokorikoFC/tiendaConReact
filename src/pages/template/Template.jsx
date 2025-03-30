@@ -54,7 +54,7 @@ function Template() {
             <div className="template-container">
                 <div className="info-container">
                     <div className="title-container">
-                        <div className="title">
+                        <div className="product-title">
                             <h1>{product.name}</h1>
                         </div>
                         <div className="decoration"></div>

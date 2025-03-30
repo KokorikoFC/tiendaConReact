@@ -36,15 +36,13 @@
     height: 6px;
     background-color: var(--rojo);
     border-radius: 5px;
-
 }
 
-.title {
+.product-title {
     width: 100%
-
 }
 
-.title h1 {
+.product-title h1{
     font-size: 46px;
     font-weight: bold;
     text-align: left;
@@ -167,8 +165,6 @@
     transition: all 0.2s;
 }
 
-
-
 .quantity-container span {
     padding: 10px 17px;
     font-size: 1em;
@@ -193,6 +189,7 @@
     align-items: center;
     gap: 5px;
 }
+
 .add-to-cart-button:hover {
     background-color: var(--verde);
     transition: all 0.2s;
