@@ -28,7 +28,6 @@ This website is built using the following main technologies:
 * **Notifications:** `react-toastify` for displaying toast notifications
 * **Data Storage:** Product data stored in a `JSON` file
 
-(Once you provide the full project structure, we can add more specific dependencies.)
 
 ## Main Components
 
